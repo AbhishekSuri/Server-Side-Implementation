@@ -1,25 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-            dataLayer.push({ ecommerce: null })
-            dataLayer.push({
-              'ecommerce': {
-                'currencyCode': 'USD',                       // Local currency is optional.
-                'product': [
-                 {
-                   'name': 'Men's Fashion T shirt',       // Name or ID is required.
-                   'id': '12345',
-                   'price': '135.00',
-                   'brand': 'Cara',
-                   'category': 'Shirt',
-                   'variant': 'Colourful',
-                   'list': 'Search Results',
-                   'position': 1
-                 }]
-              }
-            });
-    </script>
+    
     
     <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -89,7 +71,24 @@
                 <option>Large</option>
             </select>
             <input type="number" value="1">
-            <button class="normal">Add To Card</button>
+            <button class="normal" onclick="dataLayer.push({'ecommerce': null });
+                dataLayer.push({
+                    'event': 'add_to_cart',
+                    'ecommerce': {
+                        'items': [{
+                            'item_id': '1234',
+                            'item_name': 'Men's Fashion T shirt',
+                            'item_brand': 'Cara',
+                            'item_category': 'T-Shirt',
+                            'item_variant': 'Colorful',
+                            'currency': 'USD',
+                            'price': '135.00
+                        }]
+                    }
+                });>
+                Add To Card
+                    </button>
+                    
             <h4>Product Details</h4>
             <span>Good t-shirt designs are those that people want to wear. Make sure your t-shirt doesn’t
                  get stuffed in the back of the closet with a custom detailed t-shirt designed just for 
