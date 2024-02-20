@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <script>
+        function add_to_cart(){
+            dataLayer.push({'ecommerce': null });
+                dataLayer.push({
+                    'event': 'add_to_cart',
+                    'ecommerce': {
+                        'items': [{
+                            'item_id': '1234',
+                            'item_name': 'Men's Fashion T shirt',
+                            'item_brand': 'Cara',
+                            'item_category': 'T-Shirt',
+                            'item_variant': 'Colorful',
+                            'currency': 'USD',
+                            'price': '135.00
+                        }]
+                    }
+                });}
+    </script>
     
     <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -71,21 +88,7 @@
                 <option>Large</option>
             </select>
             <input type="number" value="1">
-            <button class="normal" onclick="dataLayer.push({'ecommerce': null });
-                dataLayer.push({
-                    'event': 'add_to_cart',
-                    'ecommerce': {
-                        'items': [{
-                            'item_id': '1234',
-                            'item_name': 'Men's Fashion T shirt',
-                            'item_brand': 'Cara',
-                            'item_category': 'T-Shirt',
-                            'item_variant': 'Colorful',
-                            'currency': 'USD',
-                            'price': '135.00
-                        }]
-                    }
-                });">
+            <button class="normal" onclick="add_to_cart()">
                 Add To Card
             </button>
                     
