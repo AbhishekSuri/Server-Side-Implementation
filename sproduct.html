@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+            dataLayer.push({ ecommerce: null })
+            dataLayer.push({
+              'ecommerce': {
+                'currencyCode': 'USD',                       // Local currency is optional.
+                'product': [
+                 {
+                   'name': 'Men's Fashion T shirt',       // Name or ID is required.
+                   'id': '12345',
+                   'price': '135.00',
+                   'brand': 'Cara',
+                   'category': 'Shirt',
+                   'variant': 'Colourful',
+                   'list': 'Search Results',
+                   'position': 1
+                 }]
+              }
+            });
+    </script>
+    
     <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
